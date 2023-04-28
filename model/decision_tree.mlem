@@ -1,0 +1,117 @@
+artifacts:
+  data:
+    hash: 39df3eb9a4d63ea6393f314576a5c933
+    size: 3839
+    uri: decision_tree
+call_orders:
+  predict:
+  - - model
+    - predict
+  predict_proba:
+  - - model
+    - predict_proba
+object_type: model
+processors:
+  model:
+    methods:
+      predict:
+        args:
+        - name: X
+          type_:
+            columns:
+            - ''
+            - alcohol
+            - malic_acid
+            - ash
+            - alcalinity_of_ash
+            - magnesium
+            - total_phenols
+            - flavanoids
+            - nonflavanoid_phenols
+            - proanthocyanins
+            - color_intensity
+            - hue
+            - od280/od315_of_diluted_wines
+            - proline
+            dtypes:
+            - int64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            index_cols:
+            - ''
+            type: dataframe
+        name: predict
+        returns:
+          dtype: int32
+          shape:
+          - null
+          type: ndarray
+        varkw: predict_params
+      predict_proba:
+        args:
+        - name: X
+          type_:
+            columns:
+            - ''
+            - alcohol
+            - malic_acid
+            - ash
+            - alcalinity_of_ash
+            - magnesium
+            - total_phenols
+            - flavanoids
+            - nonflavanoid_phenols
+            - proanthocyanins
+            - color_intensity
+            - hue
+            - od280/od315_of_diluted_wines
+            - proline
+            dtypes:
+            - int64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            - float64
+            index_cols:
+            - ''
+            type: dataframe
+        name: predict_proba
+        returns:
+          dtype: float64
+          shape:
+          - null
+          - 3
+          type: ndarray
+        varkw: predict_proba_params
+    type: sklearn_pipeline
+requirements:
+- module: numpy
+  version: 1.18.4
+- module: pandas
+  version: 1.3.2
+- module: feature_engine
+  package_name: feature-engine
+  version: 1.4.1
+- module: sklearn
+  package_name: scikit-learn
+  version: 1.0.2
