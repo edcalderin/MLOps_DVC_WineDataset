@@ -1,7 +1,7 @@
 artifacts:
   data:
-    hash: 39df3eb9a4d63ea6393f314576a5c933
-    size: 3839
+    hash: ee890c90f55cd55462212eace4a7f669
+    size: 3701
     uri: decision_tree
 call_orders:
   predict:
@@ -109,9 +109,9 @@ requirements:
   version: 1.18.4
 - module: pandas
   version: 1.3.2
-- module: feature_engine
-  package_name: feature-engine
-  version: 1.4.1
 - module: sklearn
   package_name: scikit-learn
   version: 1.0.2
+- module: feature_engine
+  package_name: feature-engine
+  version: 1.4.1

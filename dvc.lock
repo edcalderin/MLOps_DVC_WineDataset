@@ -2,3 +2,38 @@ schema: '2.0'
 stages:
   train:
     cmd: python src/train.py
+    deps:
+    - path: data/intermediate
+      md5: 0dae4984d8a2c602954c956dc72307ab.dir
+      size: 26724
+      nfiles: 4
+    - path: src/train.py
+      md5: 0d6a55ab79c1150e324093062e234b3e
+      size: 1231
+    outs:
+    - path: model/decision_tree
+      md5: ee890c90f55cd55462212eace4a7f669
+      size: 3701
+    - path: model/decision_tree.mlem
+      md5: 947c1d0a4dedbd394d9d4a23489c8d71
+      size: 2647
+  process_data:
+    cmd: python src/process_data.py
+    deps:
+    - path: src/process_data.py
+      md5: 7dc543a5183452e456d551a44ddd1e55
+      size: 926
+    outs:
+    - path: data/intermediate
+      md5: 0dae4984d8a2c602954c956dc72307ab.dir
+      size: 26724
+      nfiles: 4
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: model/decision_tree
+      md5: ee890c90f55cd55462212eace4a7f669
+      size: 3701
+    - path: src/evaluate.py
+      md5: 377b202bcf483ef40077266b0906b6bf
+      size: 751

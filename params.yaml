@@ -1,1 +1,5 @@
 model_path: model/decision_tree
+data:
+  intermediate: data/intermediate
+process:
+  random_state: 42
