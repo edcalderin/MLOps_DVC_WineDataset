@@ -1,3 +1,4 @@
 .ruff_cache
 !model/[*].mlem
 __pycache__
+mlops_dvc

@@ -16,6 +16,5 @@ def evaluate() -> None:
         print(f"{accuracy=}")
         live.log_metric(name="accuracy score", val=accuracy)
 
-
 if __name__ == "__main__":
     evaluate()

@@ -1,0 +1,6 @@
+[core]
+    autostage = true
+    remote = read-write
+
+['remote "read-write"']
+    url = s3://mlops-with-dvc-experiment/wine_predictor_dvc/

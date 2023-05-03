@@ -4,36 +4,36 @@ stages:
     cmd: python src/train.py
     deps:
     - path: data/intermediate
-      md5: 0dae4984d8a2c602954c956dc72307ab.dir
-      size: 26724
+      md5: ac91d99bfa5bcdf0bb1b0a96e95effba.dir
+      size: 26704
       nfiles: 4
     - path: src/train.py
       md5: 0d6a55ab79c1150e324093062e234b3e
       size: 1231
     outs:
     - path: model/decision_tree
-      md5: ee890c90f55cd55462212eace4a7f669
-      size: 3701
+      md5: 05f9a07ed81328124a5a59a545795501
+      size: 3691
     - path: model/decision_tree.mlem
-      md5: 947c1d0a4dedbd394d9d4a23489c8d71
+      md5: 81b0bd6dea18ada01d3ced12984999c3
       size: 2647
   process_data:
-    cmd: python src/process_data.py
+    cmd: python src/processing.py
     deps:
-    - path: src/process_data.py
-      md5: 7dc543a5183452e456d551a44ddd1e55
-      size: 926
+    - path: src/processing.py
+      md5: e8585437431f33427fd1dcbae3063ebd
+      size: 953
     outs:
     - path: data/intermediate
-      md5: 0dae4984d8a2c602954c956dc72307ab.dir
-      size: 26724
+      md5: ac91d99bfa5bcdf0bb1b0a96e95effba.dir
+      size: 26704
       nfiles: 4
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/decision_tree
-      md5: ee890c90f55cd55462212eace4a7f669
-      size: 3701
+      md5: 05f9a07ed81328124a5a59a545795501
+      size: 3691
     - path: src/evaluate.py
-      md5: 377b202bcf483ef40077266b0906b6bf
-      size: 751
+      md5: e31c8e2204f1b6ba34fcbe89aedf8eb0
+      size: 749
