@@ -481,10 +481,7 @@ pytz==2023.3
     # via
     #   celery
     #   pandas
-pywin32==306
-    # via
-    #   dvc-task
-    #   jupyter-core
+
 pywinpty==2.0.10
     # via
     #   jupyter-server
