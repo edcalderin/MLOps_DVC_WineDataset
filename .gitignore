@@ -2,3 +2,4 @@
 !model/[*].mlem
 __pycache__
 mlops_dvc
+.pytest_cache
