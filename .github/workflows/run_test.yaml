@@ -2,9 +2,9 @@ name: Testing model
 on:
   pull_request:
     paths:
-      - src/**
-      - tests/**
-      - params.yaml
+    - src/**
+    - tests/**
+    - params.yaml
 
 jobs:
 
@@ -29,7 +29,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        AWS_DEFAULT_REGION: ${{envs.AWS_DEFAULT_REGION}}
+        AWS_DEFAULT_REGION: aws-east-2
       run: dvc pull -r read-write
 
     - name: Run tests
