@@ -1,0 +1,4 @@
+['remote "read"']
+    url = https://mlops-with-dvc-experiment.s3.amazonaws.com/
+['remote "read-write"']
+    url = s3://mlops-with-dvc-experiment/

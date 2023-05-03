@@ -1,0 +1,47 @@
+name: Testing model
+on:
+  pull_request:
+    paths:
+    - src/**
+    - tests/**
+    - params.yaml
+jobs:
+  test_model:
+    name: Test processed code and model
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Environment setup
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependences
+      run: pip install -r requirements.txt
+
+    - name: Pull data and model
+      env:
+        AWS_ACCESS_KEY_ID: ${{AWS_ACCESS_KEY_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{AWS_SECRET_ACCESS_KEY}}
+      run: dvc pull -r read-write
+
+    - name: Run tests
+      run: pytest
+
+    - name: Evaluate model
+      run: dvc exp run evaluate
+
+    - name: Iterative CML setup
+      uses: action/setup-cml@v1
+
+    - name: Create CML report
+      env:
+        REPO_TOKEN: ${{secrets.TOKEN_GITHUB}}
+      run: |
+        dvc metrics show --show-md >> report.md
+        cat dvclive/params.yaml >> report.md
+        cml comment create report.md
+
+

@@ -17,7 +17,7 @@ def split_train_test(X: pd.DataFrame, y: pd.Series, seed: int) -> dict:
     return {"X_train": X_train, "X_test": X_test, "y_train": y_train, "y_test": y_test}
 
 
-def process_data() -> None:
+def process_data():
     df = load_data()
     X, y = getX_Y(df, 'target')
 
@@ -27,7 +27,6 @@ def process_data() -> None:
 
     for name, data in splitted_dataset.items():
         save_data(data, params["data"]["intermediate"], name)
-
 
 if __name__ == "__main__":
     process_data()

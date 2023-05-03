@@ -3,3 +3,4 @@ data:
   intermediate: data/intermediate
 process:
   random_state: 42
+  target: target
