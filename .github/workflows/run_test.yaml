@@ -23,8 +23,8 @@ jobs:
 
     - name: Pull data and model
       env:
-        AWS_ACCESS_KEY_ID: ${{AWS_ACCESS_KEY_ID}}
-        AWS_SECRET_ACCESS_KEY: ${{AWS_SECRET_ACCESS_KEY}}
+        AWS_ACCESS_KEY_ID: ${{vars.AWS_ACCESS_KEY_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{vars.AWS_SECRET_ACCESS_KEY}}
       run: dvc pull -r read-write
 
     - name: Run tests
