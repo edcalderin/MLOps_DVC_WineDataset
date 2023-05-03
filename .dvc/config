@@ -1,3 +1,6 @@
+[core]
+    autostage = true
+    remote = read-write
 ['remote "read"']
     url = https://mlops-with-dvc-experiment.s3.amazonaws.com/
 ['remote "read-write"']
