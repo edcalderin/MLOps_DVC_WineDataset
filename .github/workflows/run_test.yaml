@@ -34,7 +34,7 @@ jobs:
       run: dvc exp run evaluate
 
     - name: Iterative CML setup
-      uses: action/setup-cml@v1
+      uses: iterative/setup-cml@v1
 
     - name: Create CML report
       env:
