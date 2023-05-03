@@ -5,8 +5,11 @@ on:
     - src/**
     - tests/**
     - params.yaml
+
 jobs:
+
   test_model:
+
     name: Test processed code and model
     runs-on: ubuntu-latest
     steps:
