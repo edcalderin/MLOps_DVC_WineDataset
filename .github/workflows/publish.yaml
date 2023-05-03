@@ -7,6 +7,7 @@ on:
     - model/decision_tree.mlem
 
 jobs:
+
   publish_model:
     runs-on: ubuntu-latest
     steps:
