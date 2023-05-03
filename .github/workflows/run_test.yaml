@@ -4,7 +4,6 @@ on:
     paths:
     - src/**
     - tests/**
-    - params.yaml
 
 jobs:
 
@@ -43,4 +42,8 @@ jobs:
     - name: Create CML report
       env:
         REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      run: "dvc metrics show --show-md >> report.md        \ncml comment create report.md\n#magic___^_^___line\n#magic___^_^___line\n"
+      run: |
+        dvc metrics show --show-md >> report.md
+        cml comment create report.md
+
+
