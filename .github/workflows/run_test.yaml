@@ -43,9 +43,4 @@ jobs:
     - name: Create CML report
       env:
         REPO_TOKEN: ${{secrets.TOKEN_GITHUB}}
-      run: |
-        dvc metrics show --show-md >> report.md
-        cat dvclive/params.yaml >> report.md
-        cml comment create report.md
-
-
+      run: "dvc metrics show --show-md >> report.md        \ncml comment create report.md\n#magic___^_^___line\n#magic___^_^___line\n"
