@@ -2,9 +2,9 @@ name: Testing model
 on:
   pull_request:
     paths:
-    - src/**
-    - tests/**
-    - params.yaml
+      - src/**
+      - tests/**
+      - params.yaml
 
 jobs:
 
