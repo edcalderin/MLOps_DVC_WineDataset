@@ -148,6 +148,7 @@ dvc==2.55.0
     # via
     #   -r requirements.in
     #   dvc-s3
+    #   dvclive
 dvc-data==0.47.2
     # via dvc
 dvc-http==2.30.2
@@ -159,9 +160,13 @@ dvc-render==0.3.1
 dvc-s3==2.22.0
     # via -r requirements.in
 dvc-studio-client==0.8.0
-    # via dvc
+    # via
+    #   dvc
+    #   dvclive
 dvc-task==0.2.1
     # via dvc
+dvclive==2.8.1
+    # via -r requirements.in
 entrypoints==0.4
     # via mlem
 exceptiongroup==1.1.1
@@ -199,6 +204,7 @@ funcy==2.0
     #   dvc-data
     #   dvc-objects
     #   dvc-task
+    #   dvclive
     #   scmrepo
 gitdb==4.0.10
     # via gitpython
@@ -509,7 +515,9 @@ rich==13.3.5
     #   dvc
     #   mlem
 ruamel-yaml==0.17.22
-    # via dvc
+    # via
+    #   dvc
+    #   dvclive
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 s3fs==2023.4.0
@@ -530,7 +538,9 @@ scipy==1.10.1
     #   scikit-learn
     #   statsmodels
 scmrepo==1.0.2
-    # via dvc
+    # via
+    #   dvc
+    #   dvclive
 send2trash==1.8.2
     # via
     #   jupyter-server
