@@ -437,6 +437,8 @@ pydantic==1.10.7
     # via mlem
 pydot==1.4.2
     # via dvc
+pyfakefs==5.2.2
+    # via -r requirements.in
 pygit2==1.12.0
     # via scmrepo
 pygments==2.15.1
@@ -479,6 +481,10 @@ pytz==2023.3
     # via
     #   celery
     #   pandas
+pywin32==306
+    # via
+    #   dvc-task
+    #   jupyter-core
 pywinpty==2.0.10
     # via
     #   jupyter-server
