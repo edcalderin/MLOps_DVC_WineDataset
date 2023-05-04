@@ -25,7 +25,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: dvc pull model/svm -r read-write
+      run: dvc pull model/decision_tree -r read-write
 
     - name: Setup Flyctl
       uses: superfly/flyctl-actions/setup-flyctl@master
