@@ -31,7 +31,9 @@ antlr4-python3-runtime==4.9.3
     #   hydra-core
     #   omegaconf
 anyio==3.6.2
-    # via jupyter-server
+    # via
+    #   jupyter-server
+    #   starlette
 appdirs==1.4.4
     # via iterative-telemetry
 argon2-cffi==21.3.0
@@ -173,6 +175,8 @@ entrypoints==0.4
     # via mlem
 exceptiongroup==1.1.1
     # via pytest
+fastapi==0.95.1
+    # via -r requirements.in
 fastjsonschema==2.16.3
     # via nbformat
 feature-engine==1.4.1
@@ -437,7 +441,9 @@ psutil==5.9.5
 pycparser==2.21
     # via cffi
 pydantic==1.10.7
-    # via mlem
+    # via
+    #   fastapi
+    #   mlem
 pydot==1.4.2
     # via dvc
 pyfakefs==5.2.2
@@ -481,7 +487,10 @@ python-multipart==0.0.6
 python-utils==3.5.2
     # via pynomaly
 pytz==2023.3
-
+    # via
+    #   celery
+    #   pandas
+pywin32==306
     # via
     #   docker
     #   dvc-task
@@ -575,6 +584,8 @@ soupsieve==2.4.1
     # via beautifulsoup4
 sqltrie==0.3.1
     # via dvc-data
+starlette==0.26.1
+    # via fastapi
 statsmodels==0.13.5
     # via
     #   category-encoders
@@ -634,6 +645,7 @@ typing-extensions==4.5.0
     #   deepchecks
     #   dvc-objects
     #   pydantic
+    #   starlette
     #   typer
 urllib3==1.26.15
     # via
