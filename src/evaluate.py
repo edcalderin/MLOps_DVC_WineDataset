@@ -14,6 +14,7 @@ def evaluate() -> None:
         y_pred = model.predict(X_test)
         accuracy = accuracy_score(y_test, y_pred)
         print(f"{accuracy=}")
+    
         live.log_metric(name="accuracy score", val=accuracy)
 
 if __name__ == "__main__":
