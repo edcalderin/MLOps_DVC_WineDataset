@@ -32,7 +32,7 @@ jobs:
     - name: Setup Flyctl
       uses: superfly/flyctl-actions/setup-flyctl@master
 
-    - name: Deploy model
+    - name: Deploy model to Flyctl
       env:
         FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
       run: mlem deployment run flyctl wine-predictor model/decision_tree
