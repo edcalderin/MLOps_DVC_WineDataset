@@ -17,4 +17,5 @@ def evaluate() -> None:
         live.log_metric(name="accuracy score", val=accuracy)
 
 if __name__ == "__main__":
+
     evaluate()
